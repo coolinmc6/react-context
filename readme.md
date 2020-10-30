@@ -18,3 +18,5 @@ This repo will look at multiple Context examples and explain how they are implem
 - Tutorial Link: [https://www.smashingmagazine.com/2020/01/introduction-react-context-api/](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/)
 
 ### Single Page
+
+- [Write-up](https://github.com/coolinmc6/react-context/blob/main/analyses/singlepage.md)
