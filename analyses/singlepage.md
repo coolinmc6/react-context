@@ -129,7 +129,7 @@ in the `Provider`. And then, in that component, you wrap that with the `Consumer
 `Consumer` is that you are returning a function. So you can't put other components inside the `<ExampleContext.Consumer>` 
 tags. Here is some code that will break our app if we used it instead (try it out!):
 
-```js
+```jsx
 const GrandChild = () => {
   return (
     <MyContext.Consumer>
@@ -152,7 +152,7 @@ else in there besides a function.
 As we can see in our `<Child />` component, we've wrapped our content in our `Provider` tag which includes a `div` and our
 `<GrandChild />` component. In the `<GrandChild />` component, we'll see the `Consumer` in action:
 
-```js
+```jsx
 const GrandChild = () => {
   return (
     <MyContext.Consumer>
