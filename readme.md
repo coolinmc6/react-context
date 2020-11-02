@@ -11,6 +11,13 @@ This repo will look at multiple Context examples and explain how they are implem
 3. Wrap the consumer component with `Context.Consumer` OR use the `useContext` hook
 4. Use it
 
+## Next Steps
+
+- [x] Single Page
+- [ ] Example 1: Passing Entire Hook / Theme
+- [ ] Example 2: Medium Article
+
+
 ## React Context Examples
 
 - https://medium.com/better-programming/how-to-use-reacts-context-api-and-usecontext-hooks-effectively-ed98ad9343b6
