@@ -11,23 +11,21 @@ This repo will look at multiple Context examples and explain how they are implem
 3. Wrap the consumer component with `Context.Consumer` OR use the `useContext` hook
 4. Use it
 
-## Next Steps
 
-- [x] Single Page
-- [ ] Intro to Context
-- [ ] Example 1: Passing Entire Hook / Theme ([Smashing](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/))
-- [ ] Example 2: Medium Article
 
 
 ## React Context Examples
 
-- https://medium.com/better-programming/how-to-use-reacts-context-api-and-usecontext-hooks-effectively-ed98ad9343b6
-- https://reactjs.org/docs/context.html#api
-- https://www.freecodecamp.org/news/react-context-in-5-minutes/
-- https://www.toptal.com/react/react-context-api
-- https://medium.com/better-programming/how-to-use-reacts-context-api-and-usecontext-hooks-effectively-ed98ad9343b6
-- https://blog.logrocket.com/use-hooks-and-context-not-react-and-redux/
-- https://www.smashingmagazine.com/2020/01/introduction-react-context-api/
+|Link|Example|Code|
+|:---:|:---:|:---:|
+|https://medium.com/better-programming/how-to-use-reacts-context-api-and-usecontext-hooks-effectively-ed98ad9343b6| | |
+|https://reactjs.org/docs/context.html#api| | |
+|https://www.freecodecamp.org/news/react-context-in-5-minutes/| | |
+|https://www.toptal.com/react/react-context-api| | |
+|https://medium.com/better-programming/how-to-use-reacts-context-api-and-usecontext-hooks-effectively-ed98ad9343b6| | |
+|https://blog.logrocket.com/use-hooks-and-context-not-react-and-redux/| | |
+|https://www.smashingmagazine.com/2020/01/introduction-react-context-api/| | |
+|https://kentcdodds.com/blog/how-to-use-react-context-effectively| | |
 
 ## Intro to Context
 
