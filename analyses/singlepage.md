@@ -49,8 +49,7 @@ export default SinglePage;
 ```
 
 One of the first steps is creating the Context. Again, this would normally be in it's own file but it's pretty straightforward.
-As per the [docs](https://reactjs.org/docs/context.html#reactcreatecontext), you can create a Context object with a default value
-but you actually don't need one. In this example I used one:
+As per the [docs](https://reactjs.org/docs/context.html#reactcreatecontext), you can create a Context object with a default value but you actually don't need one. In this example I used one:
 
 ```js
 const MyContext = createContext('My Context!!')
@@ -89,15 +88,9 @@ const Child = ({ value }) => {
 }
 ```
 
-Again, first thing to note is that if this was a separate file, we'd have to import our Context object. That's one big
-take-away from all this: **you must import your Context into every component / file you use it in.** It doesn't just *live*
-everywhere. 
+Again, first thing to note is that if this was a separate file, we'd have to import our Context object. That's one big take-away from all this: **you must import your Context into every component / file you use it in.** It doesn't just *live* everywhere. 
 
-The first component used the `useContext` hook which makes things very easy. The `<Child />` and `<GrandChild />` components
-are going to use the `Provider` and `Consumer` components. It's a little extra code but it more clearly separates the "giver"
-or "provider" of data and the "receiver" or "consumer" of it. For this component, I'm passing down a value as a prop that we'll push right
-into the `Provider`. That is just to make the example consistent...in this `<Child />` component, I'm using Context differently
-so it's almost like a completely different example despite using the same
+The first component used the `useContext` hook which makes things very easy. The `<Child />` and `<GrandChild />` components are going to use the `Provider` and `Consumer` components. It's a little extra code but it more clearly separates the "giver" or "provider" of data and the "receiver" or "consumer" of it. For this component, I'm passing down a value as a prop that we'll push right into the `Provider`. That is just to make the example consistent...in this `<Child />` component, I'm using Context differently so it's almost like a completely different example despite using the same
 Context object. 
 
 Just to introduce the concept, here is the new pattern without using hooks:
@@ -124,10 +117,7 @@ const Example_Child = () => {
   )
 }
 ```
-The non-hook format has a `Consumer` and a `Provider`. You wrap the component that you want to "receive" the context value
-in the `Provider`. And then, in that component, you wrap that with the `Consumer`. One important thing to notice with the
-`Consumer` is that you are returning a function. So you can't put other components inside the `<ExampleContext.Consumer>` 
-tags. Here is some code that will break our app if we used it instead (try it out!):
+The non-hook format has a `Consumer` and a `Provider`. You wrap the component that you want to "receive" the context value in the `Provider`. And then, in that component, you wrap that with the `Consumer`. One important thing to notice with the `Consumer` is that you are returning a function. So you can't put other components inside the `<ExampleContext.Consumer>`  tags. Here is some code that will break our app if we used it instead (try it out!):
 
 ```js
 const GrandChild = () => {
@@ -146,11 +136,9 @@ const GrandChild = () => {
   )
 }
 ```
-Inside the `<MyContext.Consumer>` tags are is a `Fragment` that holds my content. This code breaks it. We can't have **anything**
-else in there besides a function.
+Inside the **<MyContext.Consumer>** tags is a **Fragment** that holds my content. This code breaks it. We can't have **anything** else in there besides a function.
 
-As we can see in our `<Child />` component, we've wrapped our content in our `Provider` tag which includes a `div` and our
-`<GrandChild />` component. In the `<GrandChild />` component, we'll see the `Consumer` in action:
+As we can see in our **<Child />** component, we've wrapped our content in our **Provider** tag which includes a **div** and our **<GrandChild />** component. In the **<GrandChild />** component, we'll see the **Consumer** in action:
 
 ```js
 const GrandChild = () => {
@@ -166,13 +154,8 @@ const GrandChild = () => {
   )
 }
 ```
-Like mentioned above **several** times, if this was not one file, we'd have to import our `MyContext` object. Notice how the
-`<GrandChild />` component is the Consumer so it has `<MyContext.Consumer>` and then inside is just a function that returns
-our content (to learn more about that piece, see the [docs](https://reactjs.org/docs/context.html#contextconsumer)). In our
-example above, the `context` variable is whatever value we put in the `MyContext.Provider value={value}` from the `<Child />`
-component. In this example, we are just displaying the string "My Context!!".
+Like mentioned above **several** times, if this was not one file, we'd have to import our `MyContext` object. Notice how the `<GrandChild />` component is the Consumer so it has `<MyContext.Consumer>` and then inside is just a function that returns our content (to learn more about that piece, see the [docs](https://reactjs.org/docs/context.html#contextconsumer)). In our example above, the `context` variable is whatever value we put in the `MyContext.Provider value={value}` from the `<Child />` component. In this example, we are just displaying the string "My Context!!".
 
-And there we have it: React Context. This is a very basic example showing how to use context as both a hook and the `Provider`-`Consumer`
-pattern.
+And there we have it: React Context. This is a very basic example showing how to use context as both a hook and the `Provider`-`Consumer` pattern.
 
 [Home](https://github.com/coolinmc6/react-context)
